@@ -4,18 +4,18 @@ import 'package:tic_tac_toe/main.dart';
 
 void main() {
   testWidgets('Tic Tac Toe app test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+    
     await tester.pumpWidget(const TicTacToeApp());
 
-    // Verify that the splash screen is displayed.
+    
     expect(find.text('Tic Tac Toe'), findsOneWidget);
     expect(find.byType(CircularProgressIndicator), findsOneWidget);
 
-    // Wait for the splash screen to navigate.
+   
     await tester.pump(const Duration(seconds: 2));
     await tester.pump(); // trigger a frame after the timer
 
-    // Verify that the game screen is displayed.
+    
     expect(find.text('Player X\'s turn'), findsOneWidget);
     expect(find.byType(GridView), findsOneWidget);
   });
