@@ -50,8 +50,8 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.lightBlue,
       body: Center(
         child: Container(
-          width: 300, // Fixed width for compact look
-          height: 400, // Fixed height for compact look
+          width: 300,
+          height: 400, 
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
@@ -118,7 +118,7 @@ class _GameScreenState extends State<GameScreen> {
         if (checkWinner()) {
           gameOver = true;
           showWinAnimation = true;
-          // Hide the animation after 2 seconds
+          
           Future.delayed(const Duration(seconds: 2), () {
             if (mounted) {
               setState(() {
@@ -199,7 +199,7 @@ class _GameScreenState extends State<GameScreen> {
           // Main content
           Center(
             child: Container(
-              width: 350, // Fixed width for compact look
+              width: 350, 
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
